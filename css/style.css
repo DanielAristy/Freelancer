@@ -1,0 +1,53 @@
+:root{/*Variables Customize properties*/
+    --oscuro: #212121;/*Color*/
+}
+
+html {
+    box-sizing: border-box;
+    min-height: 100%;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Krub', sans-serif;/*Fuente del documento*/
+    min-height: 100%;
+    /*Degradado https://webgradients.com/ los mejores degradados*/
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-size: 1.6rem;
+}
+
+.site-header nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    display: flex;
+    flex-direction: column;/*Para poner los elementos de la navegacion en columna*/
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .site-header nav{
+        flex-direction: row;/*Poner los elementos a lado del otro*/
+        justify-content: space-between;
+        
+    }
+}
+
+.site-header nav a:last-of-type{
+    margin: 0;/*Elimianr el margin del ultimo nav de site-header*/
+}
+.site-header nav a{
+    color: var(--oscuro);
+    font-size: 2.2rem;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .site-header nav a{
+        margin: 0;/*En este caso como se aplica el margin de 2rem para resposive se cambiar para el sitio web*/
+    }
+}
