@@ -19,6 +19,9 @@ body{
     font-size: 1.6rem;
 }
 
+img{
+    max-width: 100%;
+}
 .site-header nav{
     max-width: 1200px;
     margin: 0 auto;
@@ -50,4 +53,35 @@ body{
     .site-header nav a{
         margin: 0;/*En este caso como se aplica el margin de 2rem para resposive se cambiar para el sitio web*/
     }
+}
+
+/*Hero*/
+.hero{
+    height: 45rem;
+    background-image: url(../img/hero.jpg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero::after{
+    content: '';
+    background-color: rgba(0, 0, 0, .9);/*Trasparencia para darle efectos visual*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+
+.contenedor-hero{
+    color: white;
+    position: relative;
+    z-index: 1;/*Posicionar el texto encima de todos los efectos de esta imagen*/
+    /*utilizando flexbox cuadramos el texto que sea centrado*/
+    display: flex;
+    flex-direction: column;
+    align-items: center
 }
