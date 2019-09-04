@@ -1,5 +1,9 @@
 :root{/*Variables Customize properties*/
+    --primario: #FFC107;
+    --secundario: #0097a7;
     --oscuro: #212121;/*Color*/
+
+    --anchoPantalla: 120rem;
 }
 
 html {
@@ -18,12 +22,22 @@ body{
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     font-size: 1.6rem;
 }
-
+h1,h2,h3{
+    margin: 0;
+}
+h2,h3{
+    text-align: center;
+}
+h3{
+    color: var(--secundario);
+    font-weight: 400;
+    font-size: 2.2rem;
+}
 img{
     max-width: 100%;
 }
 .site-header nav{
-    max-width: 1200px;
+    max-width: var(--anchoPantalla);
     margin: 0 auto;
     padding: 2rem 0;
 
@@ -75,13 +89,50 @@ img{
     bottom: 0;
     
 }
-
 .contenedor-hero{
     color: white;
     position: relative;
     z-index: 1;/*Posicionar el texto encima de todos los efectos de esta imagen*/
-    /*utilizando flexbox cuadramos el texto que sea centrado*/
-    display: flex;
-    flex-direction: column;
-    align-items: center
+    text-align: center;/*Alineando sin flexbox*/
+}
+
+.contenedor-hero i{
+    font-size: 5rem;
+    color: var(--primario);
+    padding: 0 1rem 0 0;
+}
+.boton{
+    background-color: var(--secundario);
+    padding: 1rem 5rem;/*Tamaño de boton del color azul*/
+    display: inline-block;/*Habilitar para poder separar la etiqueta p con el boton*/
+    margin-top: 1rem;/*El tamaño al cual va a ser separado*/
+    text-decoration: none;
+    color: #ffffff;/*La palabra que hay dentro del boton*/
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.2rem;
+    border-radius: .5rem;
+}
+/*Main*/
+.contenedor{
+    max-width: var(--anchoPantalla);
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1rem;
+    /*Se logra con https://www.cssmatic.com/box-shadow*/
+    -webkit-box-shadow: 0px 10px 21px 0px rgba(0,0,0,0.74);
+    -moz-box-shadow: 0px 10px 21px -9px rgba(0,0,0,0.74);
+    box-shadow: 0px 10px 21px -9px rgba(0,0,0,0.74);
+}
+.servicios{
+    margin: 3rem auto;
+}
+.contenedor-service{
+    
+}
+
+@media (min-width: 768px) {
+    .contenedor-service{
+        display: flex;
+    }
 }
