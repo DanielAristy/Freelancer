@@ -1,7 +1,9 @@
-:root{/*Variables Customize properties*/
+:root {
+    /*Variables Customize properties*/
     --primario: #FFC107;
     --secundario: #0097a7;
-    --oscuro: #212121;/*Color*/
+    --oscuro: #212121;
+    /*Color*/
     --gris: #757575;
     --anchoPantalla: 120rem;
 }
@@ -11,157 +13,190 @@ html {
     min-height: 100%;
     font-size: 62.5%;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
-body{
-    font-family: 'Krub', sans-serif;/*Fuente del documento*/
+body {
+    font-family: 'Krub', sans-serif;
+    /*Fuente del documento*/
     min-height: 100%;
     /*Degradado https://webgradients.com/ los mejores degradados*/
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     font-size: 1.6rem;
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     margin: 0;
 }
-h2,h3{
+
+h2,
+h3 {
     text-align: center;
 }
-h3{
+
+h3 {
     color: var(--secundario);
     font-weight: 400;
     font-size: 2.2rem;
 }
-p{
+
+p {
     font-size: 1.8rem;
     line-height: 2;
 }
-img{
+
+img {
     max-width: 100%;
 }
-.site-header nav{
+
+.site-header nav {
     max-width: var(--anchoPantalla);
     margin: 0 auto;
     padding: 2rem 0;
-
     display: flex;
-    flex-direction: column;/*Para poner los elementos de la navegacion en columna*/
+    flex-direction: column;
+    /*Para poner los elementos de la navegacion en columna*/
     align-items: center;
 }
 
 @media (min-width: 768px) {
-    .site-header nav{
-        flex-direction: row;/*Poner los elementos a lado del otro*/
+    .site-header nav {
+        flex-direction: row;
+        /*Poner los elementos a lado del otro*/
         justify-content: space-between;
-        
     }
 }
 
-.site-header nav a:last-of-type{
-    margin: 0;/*Elimianr el margin del ultimo nav de site-header*/
+.site-header nav a:last-of-type {
+    margin: 0;
+    /*Elimianr el margin del ultimo nav de site-header*/
 }
-.site-header nav a{
+
+.site-header nav a {
     color: var(--oscuro);
     font-size: 2.2rem;
     text-decoration: none;
     margin-bottom: 2rem;
 }
+
 @media (min-width: 768px) {
-    .site-header nav a{
-        margin: 0;/*En este caso como se aplica el margin de 2rem para resposive se cambiar para el sitio web*/
+    .site-header nav a {
+        margin: 0;
+        /*En este caso como se aplica el margin de 2rem para resposive se cambiar para el sitio web*/
     }
 }
 
+
 /*Hero*/
-.hero{
+
+.hero {
     height: 45rem;
     background-image: url(../img/hero.jpg);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-.hero::after{
+
+.hero::after {
     content: '';
-    background-color: rgba(0, 0, 0, .9);/*Trasparencia para darle efectos visual*/
+    background-color: rgba(0, 0, 0, .9);
+    /*Trasparencia para darle efectos visual*/
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    
-}
-.contenedor-hero{
-    color: white;
-    position: relative;
-    z-index: 1;/*Posicionar el texto encima de todos los efectos de esta imagen*/
-    text-align: center;/*Alineando sin flexbox*/
 }
 
-.contenedor-hero i{
+.contenedor-hero {
+    color: white;
+    position: relative;
+    z-index: 1;
+    /*Posicionar el texto encima de todos los efectos de esta imagen*/
+    text-align: center;
+    /*Alineando sin flexbox*/
+}
+
+.contenedor-hero i {
     font-size: 5rem;
     color: var(--primario);
     padding: 0 1rem 0 0;
 }
-.boton{
+
+.boton {
     background-color: var(--secundario);
-    padding: 1rem 5rem;/*Tamaño de boton del color azul*/
-    display: inline-block;/*Habilitar para poder separar la etiqueta p con el boton*/
-    margin-top: 1rem;/*El tamaño al cual va a ser separado*/
+    padding: 1rem 5rem;
+    /*Tamaño de boton del color azul*/
+    display: inline-block;
+    /*Habilitar para poder separar la etiqueta p con el boton*/
+    margin-top: 1rem;
+    /*El tamaño al cual va a ser separado*/
     text-decoration: none;
-    color: #ffffff;/*La palabra que hay dentro del boton*/
+    color: #ffffff;
+    /*La palabra que hay dentro del boton*/
     text-transform: uppercase;
     font-weight: 700;
     font-size: 2.2rem;
     border-radius: .5rem;
     border: none;
 }
+
 .boton:hover {
     cursor: pointer;
 }
+
+
 /*Main*/
-.contenedor{
+
+.contenedor {
     max-width: var(--anchoPantalla);
     margin: 0 auto;
     background-color: white;
     border-radius: 1rem;
     /*Se logra con https://www.cssmatic.com/box-shadow*/
-    -webkit-box-shadow: 0px 10px 21px 0px rgba(0,0,0,0.74);
-    -moz-box-shadow: 0px 10px 21px -9px rgba(0,0,0,0.74);
-    box-shadow: 0px 10px 21px -9px rgba(0,0,0,0.74);
-}|
-.servicios{
+    -webkit-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.74);
+    -moz-box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.74);
+    box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.74);
+}
+
+.servicios {
     margin: 3rem auto;
 }
-.contenedor-service{
+
+.contenedor-service {
     margin-top: 3rem;
-    
 }
 
 @media (min-width: 768px) {
-    .contenedor-service{
+    .contenedor-service {
         display: flex;
         justify-content: space-between;
     }
-    .servicio{
+    .servicio {
         flex: 0 0 calc(33.3% - 1rem);
     }
 }
 
-.servicio{
+.servicio {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.servicio{
+.servicio {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.iconos{
+
+.iconos {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -172,58 +207,67 @@ img{
     align-items: center;
     margin-top: 2rem;
 }
-.iconos{
+
+.iconos {
     font-size: 3rem;
 }
 
-form{
+form {
     background-color: var(--gris);
     padding: 2rem;
     border-radius: 1rem;
     margin-top: 3rem;
 }
+
 form legend {
     text-align: center;
     font-size: 2rem;
     color: var(--primario);
     margin: 3rem 0;
 }
+
 @media (min-width: 768px) {
     form {
         max-width: 800px;
         margin: 3rem auto;
     }
-    .contenedor-campos{
+    .contenedor-campos {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    .campo{
+    .campo {
         flex: 0 0 calc(50% - 1rem);
     }
 }
-.campo{
+
+.campo {
     display: flex;
     margin-bottom: 2rem;
     align-items: center;
 }
+
 .campo label {
     flex: 0 0 90px;
     padding-top: .5rem;
     color: white;
 }
-.campo input{
+
+.campo input {
     flex: 1;
     height: 3rem;
 }
+
 .campo textarea {
     flex: 1;
     height: 6rem;
 }
-.w-100{
+
+.w-100 {
     flex: 0 0 100%;
 }
-.enviar{
+
+.enviar {
     display: flex;
     justify-content: flex-end;
 }
